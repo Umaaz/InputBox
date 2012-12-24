@@ -21,9 +21,22 @@ namespace Examples
         private void button1_Click(object sender, EventArgs e)
         {
             string userInput;
-            if (InputBox.Show("Enter a value", "Enter here: ", "value", out userInput) == DialogResult.OK)
+            if (InputBox.Show("Enter a value", "Enter here: ", "value", out userInput, true) == DialogResult.OK)
             {
                 label1.Text = userInput;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            string[] userInput;
+            if (InputBox.Show("title", new string[] { "Enter a value 1", "Enter a value 2", "Enter a value 3" }, new string[] { "value", "value", "value"}, out userInput) == DialogResult.OK)
+            {
+                foreach(string inp in userInput)
+                {
+                    listBox1.Items.Add(inp);
+                }                
             }
         }
     }
