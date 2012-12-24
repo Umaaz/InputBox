@@ -1,4 +1,6 @@
 InputBox
 ========
 
-VB style input box for c#
+Description
+===========
+A simple project for asking users for input in a quick and simple mannor.
